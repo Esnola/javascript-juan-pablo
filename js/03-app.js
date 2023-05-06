@@ -11,18 +11,19 @@ function descargarClientes(entrada){
 }
 
 //Async Await
-async function ejecutar(){
+//async function ejecutar(){
+ejecutar = async ()=>{
     try{
         console.log(1+1);
-        const respuesta = await descargarClientes("cosa");
+        const respuesta = await descargarClientes("");
         console.log('2+2');
         console.log(respuesta);
+        document.querySelector('.entrada').innerHTML = `<p class="dato"> ${respuesta}</p>`
         document.querySelector('.dato').classList.add('superado')
-        document.querySelector('.dato').innerHTML = respuesta
     }catch(error){
         console.log(error);
+        document.querySelector('.entrada').innerHTML = `<p class="dato"> ${error}</p>`
         document.querySelector('.dato').classList.add('error')
-        document.querySelector('.dato').innerHTML =error
     }
 }
 
