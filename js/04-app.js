@@ -1,39 +1,39 @@
  descargarNuevosClientes = ()=>{
     return new Promise(resolve =>{
-        console.log('Descargando datos de clientes .......');
+        console.log('Descargando datos de CLIENTES .......');
         setTimeout(()=>{
             resolve('Se han descargando todos los clientes')
-        },5000 )
+        },3000 )
     })
 }
  descargarPedidos = ()=>{
     return new Promise(resolve =>{
-        console.log('Descargando Pedidos .......');
+        console.log('Descargando PEDIDOS .......');
         setTimeout(()=>{
             resolve('Se han descargando PEDIDOS')
-        },3000 )
+        },2000 )
     })
 }
 
 
-const app = async () =>{
+// const app = async () =>{
+//     try {
+//         const clientes = await descargarNuevosClientes();
+//         console.log(clientes);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+
+const app = async() =>{
     try {
-        const clientes = await descargarNuevosClientes();
-        console.log(clientes);
+        const respuestas = await Promise.all([descargarPedidos(), descargarNuevosClientes()]);
+        respuestas.forEach(respuesta => console.log(respuesta))
+       // console.log(respuesta)
     } catch (error) {
-        console.log(error);
+        console.log(error)
     }
+
 }
 
 app();
-
-const app2 = async () =>{
-    try {
-        const clientes = await descargarPedidos();
-        console.log(clientes);
-    } catch (error) {
-        console.log(error);
-    }
-}
-
-app2();
