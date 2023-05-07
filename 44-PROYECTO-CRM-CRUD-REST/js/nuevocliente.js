@@ -1,3 +1,5 @@
+import{mostrarAlerta} from './funciones.js';
+
 (function() {
     const formulario = document.querySelector('#formulario');
     formulario.addEventListener('submit', validarCliente)
@@ -16,7 +18,7 @@
             empresa
         }
         if(!validarDatos(cliente)){
-            console.log('Hay campos vacios')
+            mostrarAlerta('Hay campos vacios')
             return
         }
         console.log('Validación superada');
