@@ -1,11 +1,18 @@
 {
   "clientes": [
     {
-      "nombre": "Juan NUEVO!",
-      "email": "correo2@correo.com",
-      "telefono": "12",
-      "empresa": "12212",
-      "id": 26
+      "nombre": "Pablo",
+      "email": "eans@df.es",
+      "telefono": "1646",
+      "empresa": "Placas Solares",
+      "id": 2
+    },
+    {
+      "nombre": "Juan",
+      "email": "juan@juna.es",
+      "telefono": "123434321",
+      "empresa": "Aluminios Juan",
+      "id": 3
     }
   ]
 }

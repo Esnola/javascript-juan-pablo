@@ -1,10 +1,11 @@
 import{mostrarAlerta} from './funciones.js';
+import{nuevoCliente} from './API.js';
 
 (function() {
     const formulario = document.querySelector('#formulario');
     formulario.addEventListener('submit', validarCliente)
     
-    function validarCliente(e){
+    async function validarCliente(e){
         e.preventDefault();
         const nombre = document.querySelector('#nombre').value;
         const email = document.querySelector('#email').value;
@@ -13,16 +14,16 @@ import{mostrarAlerta} from './funciones.js';
         
         const cliente = {
             nombre,
-            email,
+            email, 
             telefono,
             empresa
         }
         if(!validarDatos(cliente)){
-            mostrarAlerta('Hay campos vacios')
+            mostrarAlerta('Hay campos vacios'); //Archivo funciones.js
             return
         }
-        console.log('Validación superada');
-        //if()
+       // console.log('Validación superada');
+      await nuevoCliente(cliente)
     }
 
     function validarDatos(datosFrom){
