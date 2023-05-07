@@ -34,7 +34,6 @@ export const obtenerCliente = async id => {
     }
 }
 
-
 export const editarCliente = async cliente => {
     try {
         await fetch(`${url}/${cliente.id}`, {

@@ -31,7 +31,7 @@ import { mostrarAlerta } from './funciones.js';
         empresaInput.value = empresa;
         emailInput.value = email;
         telefonoInput.value = telefono;
-        idInput.value = id;
+        idInput.value = id;    
     }
 
 
