@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    border: 1px solid red;
+}
+.datosEncabezado{
+    background-color: aqua;
+    font-weight: 700;
+}
+.datosEncabezado, .datosDatos{
+    display: flex;
+    gap: 120px;
+    padding: 5px ;
+    border: 1px rgba(160, 81, 45, 0.293) solid;
+}
+
+.datosDatos{
+    display: flex;
+}
+.datosDatos:nth-child(odd){
+    background-color: antiquewhite;
+}
